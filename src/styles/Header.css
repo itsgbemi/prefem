@@ -1,5 +1,3 @@
-@import "@fontsource/inter";
-
 .header {
   display: flex;
   justify-content: space-between;
@@ -24,8 +22,12 @@
   border: none;
   cursor: pointer;
   display: flex;
-  flex-direction: column;
   align-items: center;
+  padding: 5px;
+}
+
+.nav-btn .nav-text {
+  display: none;
 }
 
 .nav-btn img {
@@ -33,13 +35,17 @@
   height: 24px;
 }
 
-.nav-btn .nav-text {
-  font-size: 12px;
-  color: #333;
-}
-
 .nav-btn.active .nav-text {
   color: #6a35aa;
   border-bottom: 2px solid #6a35aa;
 }
 
+@media (min-width: 768px) {
+  .nav-btn {
+    flex-direction: row;
+  }
+  .nav-btn .nav-text {
+    display: inline;
+    margin-left: 5px;
+  }
+}
