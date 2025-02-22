@@ -7,7 +7,7 @@ const Header = () => {
 
   const buttons = [
     { name: "Exit", icon: "exit.svg", activeIcon: "exit-active.svg" },
-    { name: "Notification", icon: "notification.svg", activeIcon: "notification-active.svg" },
+    { name: "Chat", icon: "message.svg", activeIcon: "message-active.svg" },
     { name: "Menu", icon: "menu.svg", activeIcon: "menu-active.svg" },
   ];
 
