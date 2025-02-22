@@ -1,6 +1,7 @@
+
 .footer {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between; 
   background: white;
   padding: 15px;
   border-top-left-radius: 20px;
@@ -17,21 +18,34 @@
   color: #333;
 }
 
-.footer-link.active {
-  color: #6a35aa;
-}
-
 .footer-link img {
   width: 30px;
   height: 30px;
 }
 
-.sos-text {
-  font-weight: bold;
-  text-transform: uppercase;
-  color: white;
+.footer-link.active {
+  color: #6a35aa;
+}
+
+.footer-link.sos {
+  flex-direction: column;
+}
+
+
+.footer-link.sos .sos-icon {
+  border-radius: 50%;
   background: #6a35aa;
   padding: 10px;
-  border-radius: 50%;
+  filter: none; 
+}
+
+.footer-link.sos .sos-text {
+  margin-top: 5px;
+  text-transform: uppercase;
+  color: white;
+  font-size: 0.9rem;
+}
+
+.footer-link.sos.active .sos-icon {
   filter: blur(2px);
 }
