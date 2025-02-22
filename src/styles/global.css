@@ -7,7 +7,6 @@ body {
   margin: auto;
 }
 
-/* Responsive text sizing for headings and paragraphs */
 h1 {
   font-size: clamp(2rem, 4vw, 3rem);
 }
