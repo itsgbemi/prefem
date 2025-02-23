@@ -1,4 +1,11 @@
-
+.coming-soon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px; 
+  margin: 0 auto;
+}
+  
 .coming-soon {
   display: flex;
   justify-content: center;
@@ -7,7 +14,7 @@
   border-radius: 10px;
   text-align: center;
   padding: 20px;
-  margin: 20px auto;
+  margin: 20px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
