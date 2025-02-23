@@ -35,13 +35,18 @@
 
 .menu-item {
   padding: 10px 5px;
+  border-bottom: 1px solid #eee;
   cursor: pointer;
-  font-size: 1rem;
 }
 
 .menu-item a {
   text-decoration: none;
   color: inherit;
+}
+
+.menu-item a.active {
+  border-bottom: 2px solid #6a35aa;
+  width: fit-content;
 }
 
 .dropdown-header {
@@ -51,10 +56,9 @@
   cursor: pointer;
   padding: 10px 5px;
   transition: color 0.3s, border-bottom 0.3s;
-  font-size: 1rem;
 }
 
-.dropdown-header.active, .menu-item.active {
+.dropdown-header.active {
   color: #6a35aa;
   border-bottom: 2px solid #6a35aa;
   width: fit-content;
@@ -65,7 +69,7 @@
 }
 
 .dropdown-header.active .arrow {
-  transform: rotate(90deg);
+  transform: rotate(180deg);
 }
 
 .dropdown-content {
@@ -74,5 +78,4 @@
 
 .dropdown-item {
   padding: 5px 0;
-  font-size: 1rem;
 }
