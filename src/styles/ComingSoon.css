@@ -1,11 +1,8 @@
-.coming-soon-container {
+
+.coming-soon {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
-}
-
-.coming-soon {
   background: white;
   border-radius: 10px;
   text-align: center;
