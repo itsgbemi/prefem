@@ -25,10 +25,9 @@ const Header = () => {
   return (
     <>
       <header className="header">
-        {/* Logo links to index.html */}
-        <a href="index.html">
+        <Link to="/">
           <img src="/images/logo.svg" alt="Prefem Logo" className="logo" />
-        </a>
+        </Link>
         <div className="nav-buttons">
           {buttons.map(({ name, icon, activeIcon, action }) => (
             <button
