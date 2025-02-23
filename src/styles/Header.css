@@ -9,7 +9,7 @@
 }
 
 .logo {
-  height: 40px;
+  height: 45px;
 }
 
 .nav-buttons {
@@ -38,6 +38,10 @@
 @media (min-width: 768px) {
   .header {
     padding: 15px 20px;
+  }
+
+  .logo {
+    height: 60px;
   }
   
   .nav-btn img {
