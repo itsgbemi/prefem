@@ -1,28 +1,46 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import "../styles/Footer.css";
 
 const Footer = () => {
   const location = useLocation();
   const pages = [
-    { name: "Home", path: "/", icon: "home.svg" },
-    { name: "Report", path: "/report", icon: "report.svg" },
+    { name: "Home", path: "/", icon: "home.svg", activeIcon: "home-active.svg" },
+    { name: "Report", path: "/report", icon: "report.svg", activeIcon: "report-active.svg" },
     { name: "SOS", path: "/sos", icon: "sos.svg" },
-    { name: "Call", path: "/call", icon: "call.svg" },
-    { name: "Hub", path: "/hub", icon: "hub.svg" },
+    { name: "Call", path: "/call", icon: "call.svg", activeIcon: "call-active.svg" },
+    { name: "Hub", path: "/hub", icon: "hub.svg", activeIcon: "hub-active.svg" },
   ];
 
   return (
     <footer className="footer">
-      {pages.map(({ name, path, icon }) => (
-        <Link key={name} to={path} className={`footer-link ${location.pathname === path ? "active" : ""}`}>
-          <img src={`/images/${location.pathname === path ? icon.replace(".svg", "-active.svg") : icon}`} alt={name} />
-          <span className={name === "SOS" ? "sos-text" : ""}>{name}</span>
-        </Link>
-      ))}
+      {pages.map((page) => {
+        const isActive = location.pathname === page.path;
+        if (page.name === "SOS") {
+          return (
+            <Link
+              key={page.name}
+              to={page.path}
+              className={`footer-link sos ${isActive ? "active" : ""}`}
+            >
+              <img src={`/images/${page.icon}`} alt={page.name} />
+              <span>{page.name}</span>
+            </Link>
+          );
+        }
+        return (
+          <Link
+            key={page.name}
+            to={page.path}
+            className={`footer-link ${isActive ? "active" : ""}`}
+          >
+            <img src={`/images/${isActive ? page.activeIcon : page.icon}`} alt={page.name} />
+            <span>{page.name}</span>
+          </Link>
+        );
+      })}
     </footer>
   );
 };
 
 export default Footer;
-
