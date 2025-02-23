@@ -61,7 +61,6 @@
 .dropdown-header.active {
   color: #6a35aa;
   border-bottom: 2px solid #6a35aa;
-  width: fit-content;
 }
 
 .dropdown-header .arrow {
