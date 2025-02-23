@@ -1,3 +1,12 @@
+:root {
+  --base-font-size: 1rem; 
+}
+
+@media (max-width: 600px) {
+  :root {
+    --base-font-size: 0.8rem; 
+  }
+  
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #fbf7ff;
@@ -19,6 +28,6 @@ h3 {
 h4 {
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
-p, span, a {
-  font-size: clamp(0.875rem, 2vw, 1.125rem);
+body, p, span, a, .menu-item, .nav-text, .dropdown-header {
+  font-size: var(--base-font-size);
 }
