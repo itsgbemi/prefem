@@ -1,0 +1,12 @@
+.coming-soon {
+  background: white;
+  text-align: center;
+  padding: 20px;
+  margin: 20px auto;
+  max-width: 600px;
+}
+
+.coming-soon-image {
+  max-width: 100px;
+  margin-bottom: 10px;
+}
