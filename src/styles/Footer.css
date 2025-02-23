@@ -6,13 +6,13 @@
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
-  justify-content: space-between; /* Items are spaced out */
+  justify-content: space-between; 
   align-items: center;
   background: white;
   padding: 15px 20px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Drop shadow on top border */
+  box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); 
   z-index: 1000;
 }
 
