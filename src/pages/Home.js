@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react';
+import ComingSoon from '../components/ComingSoon';
 
 const Home = () => {
-    return <h1>Welcome to Prefem App</h1>;
+  return <ComingSoon />;
 };
 
 export default Home;
-
