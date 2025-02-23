@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../styles/Menu.css';
 
 const Menu = ({ isOpen, onClose }) => {
@@ -12,9 +12,12 @@ const Menu = ({ isOpen, onClose }) => {
   return (
     <div className={`menu-panel ${isOpen ? 'open' : ''}`}>
       <div className="menu-header">
-        <button className="close-menu" onClick={onClose}>X</button>
+        <button className="close-menu" onClick={onClose}>
+          <img src="/images/cancel.svg" alt="Close Menu" className="close-menu-icon" />
+        </button>
       </div>
       <div className="menu-content">
+        {/* Dropdown for Change Language */}
         <div className="menu-item dropdown">
           <div
             className={`dropdown-header ${languageOpen ? 'active' : ''}`}
@@ -30,17 +33,35 @@ const Menu = ({ isOpen, onClose }) => {
             </div>
           )}
         </div>
-        <div className="menu-item"><Link to="/profile" onClick={onClose}>Profile</Link></div>
-        <div className="menu-item"><Link to="/" onClick={onClose}>Home</Link></div>
-        <div className="menu-item"><Link to="/report" onClick={onClose}>Report</Link></div>
-        <div className="menu-item"><Link to="/sos" onClick={onClose}>SOS</Link></div>
-        <div className="menu-item"><Link to="/call" onClick={onClose}>Call</Link></div>
-        <div className="menu-item"><Link to="/hub" onClick={onClose}>Hub</Link></div>
-        <div className="menu-item"><Link to="/contact" onClick={onClose}>Contact Us</Link></div>
-        <div className="menu-item"><Link to="/about" onClick={onClose}>About Us</Link></div>
+        {/* Other menu items */}
+        <div className="menu-item">
+          <NavLink to="/profile" onClick={onClose}>Profile</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/" onClick={onClose}>Home</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/report" onClick={onClose}>Report</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/sos" onClick={onClose}>SOS</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/call" onClick={onClose}>Call</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/hub" onClick={onClose}>Hub</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/contact" onClick={onClose}>Contact Us</NavLink>
+        </div>
+        <div className="menu-item">
+          <NavLink to="/about" onClick={onClose}>About Us</NavLink>
+        </div>
       </div>
     </div>
   );
 };
 
 export default Menu;
+          
